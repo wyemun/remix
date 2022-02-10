@@ -95,6 +95,11 @@ export interface AppConfig {
    * routes.
    */
   ignoredRouteFiles?: string[];
+
+  /** 
+   * A list of modules to skip when bundling.
+   */
+   externals?: string[];
 }
 
 /**
@@ -175,6 +180,11 @@ export interface RemixConfig {
    * The platform the server build is targeting. Defaults to "node".
    */
   serverPlatform: "node" | "neutral";
+
+  /** 
+   * A list of modules to skip when bundling.
+   */
+   externals?: string[];
 }
 
 /**
@@ -285,7 +295,8 @@ export async function readConfig(
     serverMode,
     serverModuleFormat,
     serverPlatform,
-    mdx
+    mdx,
+    externals: appConfig.externals || []
   };
 }
 
