@@ -1,0 +1,7 @@
+- Patch with your changes
+- Commit your changes
+- Create a new branch (which is this branch!)
+- Perform any module build steps that aren't managed by prepublish (`yarn build` for this project)
+- `npm pack` (or `yarn pack`) - to create an installable tarball for the module (see `/build/node_modules`)
+- Commit the tarball on your new branch
+- Push back to github
